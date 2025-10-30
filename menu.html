@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Grind - Menu</title>
+    <!-- Links to your existing style.css -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Navigation styling */
+      .nav-bar {
+        text-align: right;
+        margin-bottom: 20px;
+      }
+      .nav-bar a {
+        color: midnightblue;
+        text-decoration: none;
+        font-weight: 700;
+        margin-left: 15px;
+        padding: 5px 10px;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s;
+      }
+      .nav-bar a:hover {
+        border-bottom: 2px solid midnightblue;
+      }
+      /* Custom style for the single card layout */
+      .about-card {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        line-height: 1.6;
+      }
+      /* Menu specific styling */
+      .menu-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+      }
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dashed #ccc;
+      }
+      .menu-item:last-child {
+        border-bottom: none;
+      }
+      .item-name {
+        font-weight: 700;
+        color: #333;
+      }
+      .item-price {
+        font-weight: 700;
+        color: midnightblue;
+      }
+      .menu-category h3 {
+        color: midnightblue;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main">
+      <header>
+        <nav class="nav-bar">
+          <a href="index.html">Home</a>
+          <a href="about.html">Our Story</a>
+          <a href="menu.html">Menu</a>
+        </nav>
+
+        <img
+          class="logo"
+          src="./assets/images/coffee-logo.png"
+          alt="The Daily Grind logo"
+        />
+        <h1>Our <span class="creative">Menu</span><br />Crafted for You</h1>
+      </header>
+
+      <!-- ARTICLE: Contains the self-contained menu content -->
+      <article class="card about-card">
+        <h2 class="card-title">Espresso & Drip Coffee</h2>
+
+        <section class="menu-category">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span class="item-name">House Drip Coffee</span>
+              <span class="item-price">€3.00</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Americano</span>
+              <span class="item-price">€4.25</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Latte (Hot/Iced)</span>
+              <span class="item-price">€5.50</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Cappuccino</span>
+              <span class="item-price">€5.50</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Mocha</span>
+              <span class="item-price">€6.00</span>
+            </li>
+          </ul>
+        </section>
+
+        <h2 class="card-title">Pastries & Treats</h2>
+
+        <section class="menu-category">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span class="item-name">Croissant (Butter)</span>
+              <span class="item-price">€3.50</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Seasonal Muffin</span>
+              <span class="item-price">€4.00</span>
+            </li>
+            <li class="menu-item">
+              <span class="item-name">Vegan Lemon Bar</span>
+              <span class="item-price">€4.75</span>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      <p>Sip. Savor. Stay. – The Expresso Bar</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Grind - Our Story</title>
+    <!-- Links to your existing style.css -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Simple navigation styling to fit the design */
+      .nav-bar {
+        text-align: right;
+        margin-bottom: 20px;
+      }
+      .nav-bar a {
+        color: midnightblue;
+        text-decoration: none;
+        font-weight: 700;
+        margin-left: 15px;
+        padding: 5px 10px;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s;
+      }
+      .nav-bar a:hover {
+        border-bottom: 2px solid midnightblue;
+      }
+      /* Custom style for the single card layout on the About page */
+      .about-card {
+        width: 80%; /* Wider width for better reading */
+        margin: 40px auto; /* Center the card horizontally and add vertical space */
+        padding: 20px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- The .main div is kept for styling/flex layout compatibility with the external style.css -->
+    <div class="main">
+      <!-- Semantic header wraps the navigation, logo, and main heading -->
+      <header>
+        <!-- Semantic navigation element -->
+        <nav class="nav-bar">
+          <a href="index.html">Home</a>
+          <a href="about.html">Our Story</a>
+          <a href="menu.html">Menu</a>
+        </nav>
+
+        <img
+          class="logo"
+          src="./assets/images/coffee-logo.png"
+          alt="The Daily Grind logo"
+        />
+        <h1>
+          Our <span class="creative">Story</span><br />More Than Just Coffee
+        </h1>
+      </header>
+
+      <!-- Using semantic 'article' as the main content is a self-contained composition (the shop's philosophy) -->
+      <article class="card about-card">
+        <h2 class="card-title">About Us</h2>
+        <p class="card-text">
+          Founded in 2020 by local coffee enthusiasts, The Expresso Bar was
+          built on a simple premise: great coffee shouldn't be complicated. We
+          believe in taking the time to source beans ethically and perfect every
+          single roast. Our mission is to provide not only the perfect brew but
+          a welcoming space where community thrives and creativity flows.<br /><br />
+
+          We're proud to partner with local farmers and suppliers who share our
+          commitment to sustainability and quality. Every purchase supports our
+          neighbors and helps reduce our environmental footprint. Come visit us,
+          pull up a chair, and experience the difference a truly dedicated local
+          coffee shop can make.
+        </p>
+      </article>
+    </div>
+
+    <!-- Semantic footer is already correctly used outside of .main -->
+    <footer>
+      <p>Sip. Savor. Stay. – The Daily Grind</p>
+    </footer>
+  </body>
+</html>

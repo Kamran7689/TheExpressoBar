@@ -1,0 +1,198 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.main {
+  flex: 1;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 0;
+  /* ADDED: Vertical alignment for the logo within the nav bar */
+  vertical-align: middle;
+}
+h1 {
+  font-size: 3rem;
+}
+
+footer {
+  text-align: right;
+  /* Original Agency Color */
+  color: midnightblue;
+}
+
+/* --- Navigation Base Styles: Essential for horizontal layout and Flexbox --- */
+.nav-bar {
+  /* THIS IS CRUCIAL: It enables flex-direction: column in the media query */
+  display: flex;
+  /* MINIMUM CSS CHANGE: Changed flex-end to flex-start (default), but rely on auto-margin below */
+  justify-content: flex-start;
+  /* ADDED: Vertically align the image and text links */
+  align-items: center;
+  margin-bottom: 20px;
+  /* Removed gap: 15px; since margin is used on links */
+}
+
+/* MINIMUM CSS CHANGE: Use auto-margin to push the logo to the left and links to the right */
+.nav-bar a:first-child {
+  margin-right: auto;
+  /* Reset link styling properties that might affect the image container */
+  padding: 0;
+  border-bottom: 2px solid transparent !important;
+}
+
+.nav-bar a {
+  color: midnightblue;
+  text-decoration: none;
+  font-weight: 700;
+  /* This margin-left: 15px; now correctly spaces the links from each other and the logo link */
+  margin-left: 15px;
+  padding: 5px 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+/* Ensure the logo link itself doesn't have the bottom border hover effect */
+.nav-bar a:first-child:hover {
+  border-bottom: 2px solid transparent !important;
+}
+
+.nav-bar a:hover {
+  border-bottom: 2px solid midnightblue;
+}
+/* ----------------------------------------------------- */
+
+.tile-image {
+  float: left;
+  height: 200px;
+  margin-right: 50px;
+}
+
+.card {
+  width: 45%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.creative {
+  /* Original Agency Color */
+  color: midnightblue;
+}
+
+/* --- ESSENTIAL STYLES MOVED FROM HTML <style> BLOCK --- */
+.card-content-wrapper {
+  padding: 10px 0;
+}
+.about-card {
+  width: 80%; /* Wider width for better reading */
+  margin: 40px auto; /* Center the card horizontally and add vertical space */
+  padding: 20px;
+  line-height: 1.6;
+}
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+.menu-item:last-child {
+  border-bottom: none;
+}
+.item-name {
+  font-weight: 700;
+  color: #333;
+}
+.item-price {
+  font-weight: 700;
+  color: midnightblue;
+}
+/* ----------------------------------------------------- */
+
+/* 1. LAYOUT/CARD STACKING: Applies when screen is 1500px wide or less (as requested) */
+@media (max-width: 800px) {
+  /* ADDED: Make header a column Flex container to control order and centering */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* ADDED: Re-order elements: Nav/Logo (1) -> H1 (2) */
+  .logo {
+    width: 100px;
+  }
+
+  .nav-bar {
+    order: 1; /* Ensures navigation bar stays at the top of the header */
+    margin-bottom: 10px; /* Reduced margin for spacing */
+    /* MINIMUM CSS CHANGE: Center the navigation bar contents on smaller screens */
+    justify-content: center;
+  }
+
+  /* MINIMUM CSS CHANGE: Remove auto-margin on the logo link when centered on mobile */
+  .nav-bar a:first-child {
+    margin-right: 15px; /* Restore a standard gap between logo and first link on mobile */
+  }
+
+  h1 {
+    order: 2; /* Ensures H1 comes after the navigation/logo */
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  /* Card/Layout Stacking */
+  .card {
+    width: 100%;
+    display: block;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+
+  .card img {
+    width: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    float: none;
+    height: auto;
+  }
+
+  .tile-image {
+    margin-right: 0;
+    float: none;
+    height: auto;
+  }
+
+  /* Adjust the .about-card on smaller screens */
+  .about-card {
+    width: 95%;
+    margin: 20px auto;
+  }
+}
+
+/* 2. NAVIGATION STACKING: Applies when screen is 800px wide or less (as requested) */
+@media (max-width: 400px) {
+  /* Navigation Stacking */
+  .nav-bar {
+    flex-direction: column; /* This is the rule that stacks the links */
+    align-items: center;
+    gap: 5px;
+  }
+  .nav-bar a {
+    padding: 5px;
+  }
+}

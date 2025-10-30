@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Daily Grind - Home</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Navigation styling kept here for convenience */
+      .nav-bar {
+        text-align: right;
+        margin-bottom: 20px;
+      }
+      .nav-bar a {
+        color: midnightblue;
+        text-decoration: none;
+        font-weight: 700;
+        margin-left: 15px;
+        padding: 5px 10px;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom 0.3s;
+      }
+      .nav-bar a:hover {
+        border-bottom: 2px solid midnightblue;
+      }
+      /* A generic div wrapper for demonstration */
+      .card-content-wrapper {
+        padding: 10px 0;
+      }
+
+      /* New styling for menu page content */
+      .menu-list {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+      }
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px dashed #ccc;
+      }
+      .menu-item:last-child {
+        border-bottom: none;
+      }
+      .item-name {
+        font-weight: 700;
+        color: #333;
+      }
+      .item-price {
+        font-weight: 700;
+        color: midnightblue;
+      }
+      .about-card {
+        width: 80%; /* Wider width for better reading */
+        margin: 40px auto; /* Center the card horizontally and add vertical space */
+        padding: 20px;
+        line-height: 1.6;
+      }
+      .space {
+        color: #faf9f6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="main">
+      <header>
+        <nav class="nav-bar">
+          <a href="index.html" style="margin-left: 0">
+            <img
+              class="logo"
+              src="./assets/images/coffee-logo.png"
+              alt="The Daily Grind logo"
+            />
+          </a>
+          <a href="index.html">Home</a>
+          <a href="about.html">Our Story</a>
+          <a href="menu.html">Menu</a>
+        </nav>
+        <div class="space">
+          <p>w</p>
+        </div>
+
+        <h1>Your Daily Routine. <span class="creative">Perfected.</span></h1>
+      </header>
+      <div class="space">
+        <p>w</p>
+        <p>w</p>
+      </div>
+
+      <section class="feature-articles">
+        <article class="left card">
+          <img
+            class="tile-image"
+            src="./assets/images/coffee-shop.jpg"
+            alt="Cozy interior of a coffee shop"
+          />
+          <h2 class="card-title">Cozy Corners</h2>
+          <div class="card-content-wrapper">
+            <p class="card-text">
+              More than just coffee, we've created a warm, inviting
+              <span class="creative">atmosphere</span> perfect for working,
+              meeting friends, or just unwinding. We're your daily escape and
+              local hub.
+            </p>
+          </div>
+        </article>
+
+        <article class="right card">
+          <img
+            class="tile-image"
+            src="./assets/images/barista.jpg"
+            alt="Barista pouring beautiful latte art"
+          />
+          <h2 class="card-title">The Perfect Brew</h2>
+          <p class="card-text">
+            Every cup is a masterpiece. We meticulously source our beans and
+            train our baristas to deliver the richest, most
+            <span class="creative">flavorful</span>
+            coffee, crafted with precision just for you.
+          </p>
+        </article>
+      </section>
+
+      <div style="clear: both"></div>
+    </main>
+
+    <footer>
+      <p>Sip. Savor. Stay. – The Expresso Bar</p>
+    </footer>
+  </body>
+</html>
